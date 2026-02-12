@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fontuno: "Kapakana", cursive;
+  --fontdue: "Roboto", sans-serif;
+  --gold: #e9b600;
+  --1rem: 1rem;
+  --12rem: 1.2rem;
+  --2rem: 2rem;
+}
+
+.activeBtn {
+  background-color: var(--gold) !important;
+}
+
+.visibility {
+  visibility: visible !important;
+}
+
+.mr10 {
+  margin: 10px 0;
+}
+
+.mr15 {
+  margin: 15px 0 0 0;
+}
+
+.mr20 {
+  margin: 20px 0 10px;
+}
+
+.mr25 {
+  margin: 25px 0 0 0;
+}
+
+.mr35 {
+  margin: 35px 0 0 0;
+}
+
+.mr65 {
+  margin: 65px 0 0 0;
+}
+
+.mr85 {
+  margin: 85px 0 0 0;
+}
+
+body {
+  background-color: rgba(242, 242, 242, 0.3882352941);
+  height: 300vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sposi {
+  transition: opacity 1.3s ease-in-out;
+}
+
+#addToCalendar {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--gold);
+  color: white;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.translate {
+  top: 55% !important;
+}
+
+.animation {
+  animation: load 1.7s infinite linear;
+}
+@keyframes load {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.heart {
+  background-color: var(--gold);
+  line-height: 15px;
+  padding: 10px;
+  border-radius: 30px;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.regalo {
+  margin: 6px auto 0 auto;
+  background-color: var(--gold);
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 30px;
+  display: flex;
+  padding: 8px;
+  text-align: center;
+}
+
+.preload {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100svh;
+  transition: 0.5s ease-in-out;
+  background-image: url("../media/foto_custom.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+.preload .container .fiocco {
+  position: relative;
+  height: 100svh;
+}
+.preload .container .fiocco .messaggio {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  width: 100%;
+  text-align: center;
+  color: var(--gold);
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  font-family: var(--fontuno);
+}
+.preload .container .fiocco .messaggio img {
+  max-width: 130px;
+}
+
+.evento {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  visibility: hidden;
+}
+
+.btnIban {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  color: black;
+  cursor: pointer;
+}
+.btnIban span {
+  font-size: 1rem !important;
+  font-family: var(--fontdue) !important;
+}
+.btnIban .coordinate {
+  display: inline-block;
+}
+
+.btnConfirm {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: var(--gold);
+  border: none;
+  border-radius: 30px;
+}
+.btnConfirm a {
+  color: black;
+  text-decoration: none;
+}
+
+#copyBtn {
+  padding: 11px 40px;
+  display: inline-block;
+  background-color: var(--gold);
+  border: none;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: black !important;
+}
+
+.homepage {
+  padding-bottom: 100px;
+}
+.homepage .container .citazione {
+  text-align: center;
+  padding: 0 15px;
+}
+.homepage .container .citazione h2 {
+  font-size: 1rem;
+  line-height: 1.7rem;
+  font-family: var(--fontdue);
+}
+.homepage .container .citazione span {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  font-family: var(--fontuno);
+}
+.homepage .container .citazione h1 {
+  font-family: var(--fontuno);
+  font-size: 5.4rem;
+  line-height: 3.8rem;
+  color: var(--gold);
+}
+.homepage .container .citazione h3 {
+  font-family: var(--fontdue);
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: black;
+}
+.homepage .container .citazione button {
+  display: block;
+  margin: 10px auto 0 auto;
+}
+.homepage .container .countdown {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.homepage .container .countdown .titolo {
+  text-align: center;
+}
+.homepage .container .countdown .titolo h2 {
+  font-family: var(--fontdue);
+  font-size: 2rem;
+  line-height: 2.6rem;
+  color: black;
+}
+.homepage .container .countdown .titolo h3 {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: var(--gold);
+  font-family: var(--fontdue);
+}
+.homepage .container .countdown #countdown {
+  padding: 15px 0;
+}
+.homepage .container .countdown #countdown ul {
+  display: flex;
+  justify-content: center;
+}
+.homepage .container .countdown #countdown ul li {
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--gold);
+  font-family: var(--fontdue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 4px;
+}
+.homepage .container .countdown #countdown ul li span {
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  letter-spacing: 2px;
+  margin: 0 5px;
+  font-weight: bold;
+  color: black;
+}
+.homepage .container .iconeEvento {
+  padding: 20px 20px 30px 20px;
+}
+.homepage .container .iconeEvento .slotIcon {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+.homepage .container .iconeEvento .slotIcon .icona {
+  width: 50px;
+  height: 50px;
+  background-color: var(--gold);
+  padding: 12px;
+  border-radius: 30px;
+}
+.homepage .container .iconeEvento .slotIcon .textEvent {
+  padding: 0px 10px;
+  font-family: var(--fontdue);
+}
+.homepage .container .iconeEvento .slotIcon .textEvent h4 {
+  font-size: 0.8rem;
+}
+.homepage .container .iconeEvento .slotIcon .textEvent h2 {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: var(--gold);
+}
+.homepage .container .iconeEvento .slotIcon .textEvent h3 {
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 600px) {
+  .homepage .container .location {
+    height: 750px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .homepage .container .location {
+    height: 580px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .homepage .container .location {
+    height: 540px;
+  }
+}
+.homepage .container .location .selezione {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homepage .container .location .selezione button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.homepage .container .location .mappe {
+  text-align: center;
+  padding: 0 20px;
+  font-family: var(--fontdue);
+  font-size: 1rem;
+  font-weight: bold;
+}
+.homepage .container .location .mappe .point {
+  width: 40px;
+  height: 40px;
+  margin: 20px auto 20px auto;
+  background-color: var(--gold);
+  padding: 8px;
+  border-radius: 30px;
+}
+.homepage .container .location .mappe .tenuta {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.homepage .container .location .mappe .tenuta h1 {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+.homepage .container .location .mappe .tenuta p {
+  color: var(--gold);
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+.homepage .container .location .mappe .tenuta h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.homepage .container .location .mappe .geo {
+  position: relative;
+  height: 265px;
+}
+.homepage .container .location .mappe .geo img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */
