@@ -34,7 +34,7 @@
 }
 
 .mr10 {
-  margin: 10px 0;
+  margin: 10px 0 0;
 }
 
 .mr15 {
@@ -142,6 +142,7 @@ img {
   left: 0;
   top: 0;
   width: 100%;
+  cursor: pointer;
   height: 100svh;
   transition: 0.5s ease-in-out;
   background-image: url("../media/foto_custom.jpg");
@@ -150,7 +151,7 @@ img {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 10;
+  z-index: 100;
 }
 .preload .container {
   position: relative;
