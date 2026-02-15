@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
    const selezione = document.querySelector('.selezione');
    const input = document.querySelector('.btnIban');
    const copyBtn = document.getElementById('copyBtn');
-   fiocco.addEventListener('click', startInvito);
-   input.addEventListener('click', activeIban);
+   document.body.style.overflow = "hidden";
+   fiocco?.addEventListener('click', startInvito);
    sposi.classList.add('hide');
    selezione.addEventListener('click', activeLocation);
-   document.body.style.position = "fixed";
 
    function startInvito() {
       setInterval(() => {
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setInterval(() => {
          preload.classList.add('hidden');
          sposi.classList.remove('hide');
-         document.body.style.position = "";
+         document.body.style.overflow = "";
       }, 400)
    }
 
@@ -79,29 +78,5 @@ document.addEventListener('DOMContentLoaded', () => {
          }
       })
    }
-
-   function activeIban() {
-      input.value = 'IT60X0542811101000000123456';
-   }
-
-   copyBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-
-      input.select();
-      input.setSelectionRange(0, 99999); // iOS fix
-
-      try {
-         document.execCommand('copy');
-
-         copyBtn.textContent = 'Copiato';
-      } catch (err) {
-         alert('Copia non supportata');
-      }
-
-      setTimeout(() => {
-         copyBtn.textContent = 'Copia';
-      }, 1500);
-   });
-
 
 })

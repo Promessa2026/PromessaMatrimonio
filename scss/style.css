@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,14 +9,24 @@
 :root {
   --fontuno: "Kapakana", cursive;
   --fontdue: "Roboto", sans-serif;
+  --fontre: "Tangerine", cursive;
   --gold: #e9b600;
+  --verde: #a8b59e;
+  --grigio: #2B2C28;
   --1rem: 1rem;
   --12rem: 1.2rem;
   --2rem: 2rem;
 }
 
+#message {
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: var(--fontdue);
+  letter-spacing: -1px;
+}
+
 .activeBtn {
-  background-color: var(--gold) !important;
+  background-color: var(--verde) !important;
 }
 
 .visibility {
@@ -52,7 +63,7 @@
 
 body {
   background-color: rgba(242, 242, 242, 0.3882352941);
-  height: 300vh;
+  color: #2B2C28;
 }
 
 img {
@@ -68,7 +79,7 @@ img {
   padding: 15px 20px;
   border: none;
   border-radius: 30px;
-  background-color: var(--gold);
+  background-color: var(--verde);
   color: white;
 }
 
@@ -107,7 +118,6 @@ img {
 }
 
 .heart {
-  background-color: var(--gold);
   line-height: 15px;
   padding: 10px;
   border-radius: 30px;
@@ -142,6 +152,10 @@ img {
   background-repeat: no-repeat;
   z-index: 10;
 }
+.preload .container {
+  position: relative;
+  z-index: 10;
+}
 .preload .container .fiocco {
   position: relative;
   height: 100svh;
@@ -152,13 +166,23 @@ img {
   left: 0%;
   width: 100%;
   text-align: center;
-  color: var(--gold);
+  color: #fff;
   transform: translateY(-50%);
   font-size: 2.5rem;
   font-family: var(--fontuno);
 }
 .preload .container .fiocco .messaggio img {
   max-width: 130px;
+}
+.preload::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.369);
+  z-index: 1;
 }
 
 .evento {
@@ -190,13 +214,13 @@ img {
 
 .btnConfirm {
   display: inline-block;
-  padding: 15px 25px;
-  background-color: var(--gold);
+  padding: 20px 25px;
+  background-color: var(--verde);
   border: none;
   border-radius: 30px;
 }
 .btnConfirm a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -211,9 +235,6 @@ img {
   color: black !important;
 }
 
-.homepage {
-  padding-bottom: 100px;
-}
 .homepage .container .citazione {
   text-align: center;
   padding: 0 15px;
@@ -245,8 +266,8 @@ img {
   margin: 10px auto 0 auto;
 }
 .homepage .container .countdown {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .homepage .container .countdown .titolo {
   text-align: center;
@@ -273,7 +294,7 @@ img {
 .homepage .container .countdown #countdown ul li {
   list-style: none;
   font-size: 0.9rem;
-  color: var(--gold);
+  color: var(--verde);
   font-family: var(--fontdue);
   display: flex;
   flex-direction: column;
@@ -286,7 +307,7 @@ img {
   letter-spacing: 2px;
   margin: 0 5px;
   font-weight: bold;
-  color: black;
+  color: var(--grigio);
 }
 .homepage .container .iconeEvento {
   padding: 20px 20px 30px 20px;
@@ -299,7 +320,7 @@ img {
 .homepage .container .iconeEvento .slotIcon .icona {
   width: 50px;
   height: 50px;
-  background-color: var(--gold);
+  background-color: var(--verde);
   padding: 12px;
   border-radius: 30px;
 }
@@ -309,14 +330,16 @@ img {
 }
 .homepage .container .iconeEvento .slotIcon .textEvent h4 {
   font-size: 0.8rem;
+  color: var(--grigio);
 }
 .homepage .container .iconeEvento .slotIcon .textEvent h2 {
   font-size: 1.2rem;
   line-height: 1.8rem;
-  color: var(--gold);
+  color: var(--verde);
 }
 .homepage .container .iconeEvento .slotIcon .textEvent h3 {
   font-size: 0.9rem;
+  color: var(--grigio);
 }
 @media screen and (min-width: 600px) {
   .homepage .container .location {
@@ -342,7 +365,7 @@ img {
   display: inline-block;
   padding: 15px 30px;
   margin: 10px;
-  background-color: black;
+  background-color: var(--grigio);
   color: white;
   border: none;
   border-radius: 30px;
@@ -359,7 +382,7 @@ img {
   width: 40px;
   height: 40px;
   margin: 20px auto 20px auto;
-  background-color: var(--gold);
+  background-color: var(--verde);
   padding: 8px;
   border-radius: 30px;
 }
@@ -373,7 +396,7 @@ img {
   line-height: 1.6rem;
 }
 .homepage .container .location .mappe .tenuta p {
-  color: var(--gold);
+  color: var(--verde);
   font-size: 1rem;
   line-height: 1.6rem;
 }
@@ -390,4 +413,39 @@ img {
   left: 0;
   top: 0;
   visibility: hidden;
+}
+.homepage .container footer {
+  background-color: var(--verde);
+  padding: 20px 10px;
+  margin-top: 70px;
+}
+.homepage .container footer .infoFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.homepage .container footer .infoFooter .wrap {
+  width: 50%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.homepage .container footer .infoFooter .wrap:nth-child(1) {
+  width: 100%;
+}
+.homepage .container footer .infoFooter .wrap li {
+  list-style-type: none;
+}
+.homepage .container footer .infoFooter .wrap li a {
+  color: white;
+  font-family: var(--fontdue);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+}
+.homepage .container footer .infoFooter .wrap li b {
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  color: white;
+  font-family: var(--fontdue);
 }/*# sourceMappingURL=style.css.map */
