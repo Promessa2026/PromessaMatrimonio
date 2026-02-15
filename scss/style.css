@@ -124,8 +124,20 @@ img {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
+  animation: love 0.7s infinite linear;
 }
 
+@keyframes love {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.38);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .regalo {
   margin: 6px auto 0 auto;
   background-color: var(--gold);
